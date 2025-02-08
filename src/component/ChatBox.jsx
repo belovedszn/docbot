@@ -7,7 +7,7 @@ import { getApiDocs } from "../ai";
 function ChatBox() {
   const [request, setRequest] = useState("");
   const [aiResponse, setAiResponse] = useState([]);
-  const [userMessages, setUserMessages] = useState([]); // Stores user inputs
+  const [userMessages, setUserMessages] = useState([]); 
   const [empty, setEmpty] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -26,8 +26,8 @@ function ChatBox() {
       return;
     }
 
-    setRequest(formInfo); // Update request for API call
-    setUserMessages((prev) => [...prev, formInfo]); // Store user input
+    setRequest(formInfo); 
+    setUserMessages((prev) => [...prev, formInfo]); 
     formElement.reset();
   }
 
@@ -36,13 +36,13 @@ function ChatBox() {
 
     async function getApi() {
       setLoading(true);
-      setAiResponse((prev) => [...prev, "Fetching..."]); // Show Typing Effect
+      setAiResponse((prev) => [...prev, "Fetching..."]); 
 
       try {
         const response = await getApiDocs(request);
         setLoading(false);
 
-        // Remove "Typing..." and add an empty slot for the typing effect
+        
         setAiResponse((prev) => [...prev.slice(0, -1), ""]);
         typeResponse(response);
       } catch (error) {
@@ -55,17 +55,17 @@ function ChatBox() {
   }, [request]);
 
 const typeResponse = (text) => {
-  if (!text) return; // Ensure text is not undefined or empty
+  if (!text) return; 
 
   let i = 0;
 
-  setAiResponse([""]); // Initialize with an empty string to avoid undefined behavior
+  setAiResponse([""]); 
 
   const interval = setInterval(() => {
     setAiResponse((prev) => {
-      const safePrev = Array.isArray(prev) ? prev : [""]; // Ensure prev is an array
-      const lastResponse = safePrev[safePrev.length - 1] || ""; // Ensure no undefined
-      return [...safePrev.slice(0, -1), lastResponse + (text[i] || "")]; // Append only valid characters
+      const safePrev = Array.isArray(prev) ? prev : [""]; 
+      const lastResponse = safePrev[safePrev.length - 1] || ""; 
+      return [...safePrev.slice(0, -1), lastResponse + (text[i] || "")]; 
     });
 
     i++;

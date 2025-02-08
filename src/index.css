@@ -431,7 +431,7 @@ header nav {
 
 @media (max-width: 768px) {
   .message {
-    max-width: 100%;
+    max-width: 80%;
   }
   .state .docbot {
     font-size: 28px;
@@ -466,6 +466,10 @@ header nav {
   .details .dev {
     margin-bottom: 40px;
   }
+  
+.homepage .continue-btn {
+  padding-bottom: 50px;
+}
 }
 
 @media (max-width: 600px) {

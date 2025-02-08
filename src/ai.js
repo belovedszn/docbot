@@ -11,7 +11,11 @@ When a user provides an API endpoint, explain:
 Format the response in markdown for readability.
 `;
 
+//const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN);
+//const hf = new HfInference(process.env.VITE_HF_ACCESS_TOKEN);
 const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN);
+
+
 
 export async function getApiDocs(endPoint) {
   try {

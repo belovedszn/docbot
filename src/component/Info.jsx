@@ -80,32 +80,3 @@ function Info() {
 
 export default Info;
 
-/**
- * About This Project
-Welcome to API DocBot, a side project built to test capabilities in React and AI-powered API documentation generation. This tool allows users to enter an API endpoint, fetch its documentation, and receive a structured explanation, including available methods, request/response formats, authentication requirements, and usage examples.
-
-Why This Project?
-This project was created as an experiment to explore:
-
-React Hooks – Managing state and UI updates dynamically.
-AI Integration – Using Hugging Face’s Mistral-Nemo-Instruct-2407 model to generate API documentation explanations.
-Asynchronous Data Handling – Fetching and displaying AI-generated responses in real time.
-Frontend UI/UX – Designing a simple, interactive chat-like interface.
-How It Works
-Enter an API endpoint into the chatbox.
-The AI fetches relevant documentation and explains it in a structured format.
-The response is displayed in markdown format for easy readability.
-Technologies Used
-React (Vite Setup) for the frontend.
-Hugging Face API for AI-powered responses.
-CSS & UI Components for styling and responsiveness.
-Future Enhancements
-While this is a side project, potential improvements include:
-✅ Adding support for multiple AI models.
-✅ Enhancing UI with syntax highlighting for code snippets.
-✅ Caching previous responses for better performance.
-
-This project is purely for experimentation and learning—if you have suggestions, feel free to share! 🚀
-
-
- */

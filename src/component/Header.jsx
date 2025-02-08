@@ -51,9 +51,3 @@ function Header() {
 
 export default Header;
 
-/**
- *  <div className="active-state">
-              <span className="green-dot"></span>
-              <span>{online ? "online" : "offline"}</span>
-            </div>
- */
